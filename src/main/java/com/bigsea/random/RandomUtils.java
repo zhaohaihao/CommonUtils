@@ -87,7 +87,7 @@ public class RandomUtils {
 			if (i == 0) {
 				sb.append(genNumIncludeMax(0, 9));
 			} else {
-				sb.append(genNumIncludeMin(0, 9));
+				sb.append(genNumIncludeMinAndMax(0, 9));
 			}
 		}
 		return sb.toString();
