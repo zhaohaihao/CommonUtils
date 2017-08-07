@@ -1,6 +1,7 @@
 # Java工具包
 日常造轮子：<br />
 　　主要存放一些为解决日常工作、学习过程中的问题所需工具类。<br />
+　　各方法的具体作用已注释标明。<br />
 
 ----------
  1. [CSV 文件工具类 CSVUtils](https://github.com/zhaohaihao/CommonUtils/blob/master/src/main/java/com/bigsea/csv/CSVUtils.java)
