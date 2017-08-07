@@ -20,35 +20,47 @@ import com.bigsea.file.FileUtils;
  */
 public class ZipUtils {
 	
-	/** 避免 压缩|解压 中文文件名乱码 */
+	/** 避免 (压缩|解压) 中文文件名乱码 */
 	private static final String CHINESE_CHARSET = "GBK";
 	
 	/** 文件读取的缓冲区的大小 */
 	private static final int CACHE_SIZE = 1024;
 	
 	/**
-	 * 解压zip格式的压缩文件
+	 * 解压压缩文件至当前目录
 	 * @param srcZipPath 压缩文件路径
 	 * @return
 	 */
-	public static boolean unZipFiles(String srcZipPath) {
-		// 解压目录
-		String dstZipPath = srcZipPath.substring(0, srcZipPath.lastIndexOf("."));
-		
+	public static boolean unCompress(String srcZipPath) {
+		return unCompress(srcZipPath, null);
+	}
+	
+	/**
+	 * 解压压缩文件至指定目录
+	 * @param srcZipPath 压缩文件路径
+	 * @param dstZipPath 解压文件指定目录
+	 * @return
+	 */
+	public static boolean unCompress(String srcZipPath, String dstZipPath) {
+		if (srcZipPath == null) {
+			return false;
+		}
+		if (dstZipPath == null) {
+			dstZipPath = FileUtils.removeSuffix(srcZipPath);
+		}
+
 		File file = new File(dstZipPath);
 		if (file.exists()) {
 			FileUtils.deleteFolder(dstZipPath);
 		}
 		file.mkdirs();
-		
+
 		ZipFile zipFile = null;
 		File f = null;
 		try {
 			zipFile = new ZipFile(srcZipPath, CHINESE_CHARSET);
 			f = new File(srcZipPath);
-			if ((!f.exists()) && (f.length() <= 0)) {
-				throw new Exception("要解压的文件不存在!");
-			}
+
 			String strPath, gbkPath, strtemp;
 			File tempFile = new File(dstZipPath);
 			strPath = tempFile.getAbsolutePath();
@@ -67,7 +79,6 @@ public class ZipUtils {
 					BufferedInputStream bis = new BufferedInputStream(is);
 					gbkPath = zipEntry.getName();
 					strtemp = strPath + File.separator + gbkPath;
-
 					// 建目录
 					String strsubdir = gbkPath;
 					for (int i = 0; i < strsubdir.length(); i++) {
@@ -97,20 +108,16 @@ public class ZipUtils {
 			e.printStackTrace();
 			return false;
 		} finally {
-			if(zipFile != null){
+			if (zipFile != null) {
 				try {
-					zipFile.close();	// 压缩包被占用, 需关闭后才能删除
+					zipFile.close(); // 压缩包被占用, 需关闭后才能删除
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
 			}
-			// 解压后删除压缩包
-			if(f != null) FileUtils.deleteFolder(srcZipPath);
+			if (f.exists())
+				FileUtils.deleteFolder(srcZipPath);
 		}
 	}
 	
-	public static void main(String[] args) {
-		String zipFileName = "C:/Users/Administrator/Desktop/test.zip";
-		System.out.println(unZipFiles(zipFileName));
-	}
 }
