@@ -10,6 +10,6 @@
  5. [RAR 压缩文件处理类 RarUtils](https://github.com/zhaohaihao/CommonUtils/blob/master/src/main/java/com/bigsea/rar/RarUtils.java)
  6. [ZIP 压缩文件处理类 ZipUtils](https://github.com/zhaohaihao/CommonUtils/blob/master/src/main/java/com/bigsea/zip/ZipUtils.java)
  7. [实体工具类 BeanUtils](https://github.com/zhaohaihao/CommonUtils/blob/master/src/main/java/com/bigsea/bean/BeanUtils.java)
- 8. [字符串工具类 StringUtils](https://github.com/zhaohaihao/CommonUtils/blob/master/src/main/java/com/bigsea/bean/StringUtils.java)
+ 8. [字符串工具类 StringUtils](https://github.com/zhaohaihao/CommonUtils/blob/master/src/main/java/com/bigsea/base/StringUtils.java)
 ----------
 #### 持续更新...
