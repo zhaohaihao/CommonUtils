@@ -66,4 +66,37 @@ public class BeanUtils {
 		return obj;
 	}
 	
+	public static void main(String[] args) {
+		Student s = new Student();
+		s.setUserName("ZHH");
+		s.setAge("24");
+		System.out.println(object2Map(s));
+		
+		Map<String, Object> map = new HashMap<>();
+		map.put("userName", "zhh");
+		map.put("age", "24");
+		System.out.println(map2Object(map, Student.class));
+	}
+}
+
+class Student {
+	private String userName;
+	private String age;
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	public String getAge() {
+		return age;
+	}
+	public void setAge(String age) {
+		this.age = age;
+	}
+	@Override
+	public String toString() {
+		return "Student [userName=" + userName + ", age=" + age + "]";
+	}
+	
 }
