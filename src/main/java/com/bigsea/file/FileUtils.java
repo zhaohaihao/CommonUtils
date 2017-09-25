@@ -104,8 +104,7 @@ public class FileUtils {
 						 * 关于文件路径分隔符:
 						 * Windows 下是"\",  unix|linux 下是"/"
 						 * 考虑到程序的可移植性
-						 * 对文件路径做统一替换处理
-						 * "/"或 File.separator均可
+						 * 对文件路径做统一替换处理 "/"
 						 */
 						filePath = f.getAbsolutePath().replace("\\", "/");
 						pathList.add(filePath);
