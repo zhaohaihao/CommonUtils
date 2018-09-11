@@ -26,7 +26,6 @@
 
 # Gradle:
 .idea/gradle.xml
-.idea/
 
 # Mongo Explorer plugin:
 .idea/mongoSettings.xml
@@ -83,3 +82,7 @@ buildNumber.properties
 
 # config file
 application.properties
+
+# idea
+*.iml
+.idea/
