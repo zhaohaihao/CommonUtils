@@ -9,11 +9,8 @@ import pers.hilox.framework.core.ensure.EnsureParam;
  */
 public class EnsureParamBoolean extends EnsureParam<Boolean> {
 
-    private Boolean condition;
-
     public EnsureParamBoolean(Boolean condition) {
         super(condition);
-        this.condition = condition;
     }
 
     /**
@@ -22,7 +19,7 @@ public class EnsureParamBoolean extends EnsureParam<Boolean> {
      * @return
      */
     public EnsureParamBoolean isFalse(String errorCode) {
-        if (condition) {
+        if (hiloxObject) {
             createHiloxException(errorCode);
         }
         return this;
@@ -34,7 +31,7 @@ public class EnsureParamBoolean extends EnsureParam<Boolean> {
      * @return
      */
     public EnsureParamBoolean isTrue(String errorCode) {
-        if (!condition) {
+        if (!hiloxObject) {
             createHiloxException(errorCode);
         }
         return this;
@@ -46,7 +43,7 @@ public class EnsureParamBoolean extends EnsureParam<Boolean> {
      * @return
      */
     public EnsureParamBoolean isNotNull(String errorCode) {
-        if (condition == null) {
+        if (hiloxObject == null) {
             createHiloxException(errorCode);
         }
         return this;
