@@ -1,20 +1,8 @@
 package pers.hilox.framework;
 
-import static org.junit.Assert.assertTrue;
-
-import org.junit.Test;
-
 /**
- * Unit test for simple App.
+ * 测试用例类
  */
-public class AppTest 
-{
-    /**
-     * Rigorous Test :-)
-     */
-    @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
-    }
+public class AppTest {
+
 }
