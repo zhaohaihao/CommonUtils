@@ -5,7 +5,7 @@ import pers.hilox.framework.core.ensure.extensions.EnsureParamObject;
 
 /**
  * 参数校验类实例化类
- * @auther hilox
+ * @author hilox
  * @since 1.0
  */
 public class Ensure {

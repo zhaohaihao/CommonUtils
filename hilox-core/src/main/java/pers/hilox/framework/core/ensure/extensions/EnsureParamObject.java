@@ -4,7 +4,7 @@ import pers.hilox.framework.core.ensure.EnsureParam;
 
 /**
  * Object参数校验类
- * @auther hilox
+ * @author hilox
  * @since 1.0
  */
 public class EnsureParamObject extends EnsureParam<Object> {

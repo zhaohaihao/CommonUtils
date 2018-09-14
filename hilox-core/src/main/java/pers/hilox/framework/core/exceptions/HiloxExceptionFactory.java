@@ -4,7 +4,7 @@ import pers.hilox.framework.core.context.ApplicationContextHelper;
 
 /**
  * 异常工厂
- * @auther hilox
+ * @author hilox
  * @since 1.0
  */
 public class HiloxExceptionFactory {

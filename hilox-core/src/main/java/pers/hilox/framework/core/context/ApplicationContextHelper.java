@@ -5,7 +5,7 @@ import org.springframework.context.ApplicationContextAware;
 
 /**
  * 应用上下文辅助类
- * @auther hilox
+ * @author hilox
  * @since 1.0
  */
 public class ApplicationContextHelper implements ApplicationContextAware {

@@ -4,7 +4,7 @@ import pers.hilox.framework.core.exceptions.HiloxExceptionFactory;
 
 /**
  * 参数校验基类
- * @auther hilox
+ * @author hilox
  * @since 1.0
  */
 public class EnsureParam<HiloxObject> {

@@ -4,7 +4,7 @@ import pers.hilox.framework.core.ensure.EnsureParam;
 
 /**
  * 布尔参数校验类
- * @auther hilox
+ * @author hilox
  * @since 1.0
  */
 public class EnsureParamBoolean extends EnsureParam<Boolean> {

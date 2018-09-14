@@ -1,7 +1,7 @@
 package pers.hilox.framework.core.ensure.extensions;
 
 /**
- * @auther hilox
+ * @author hilox
  * @since 1.0
  */
 public class EnsureParamString extends EnsureParamObject {

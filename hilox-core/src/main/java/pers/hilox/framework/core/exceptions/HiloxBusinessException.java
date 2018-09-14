@@ -2,7 +2,7 @@ package pers.hilox.framework.core.exceptions;
 
 /**
  * 业务异常
- * @auther hilox
+ * @author hilox
  * @since 1.0
  */
 public class HiloxBusinessException extends RuntimeException {
