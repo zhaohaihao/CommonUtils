@@ -2,6 +2,8 @@ package pers.hilox.framework.core.ensure;
 
 import pers.hilox.framework.core.ensure.extensions.*;
 
+import java.util.Collection;
+
 /**
  * 参数校验类实例化类
  * @author hilox
@@ -55,5 +57,15 @@ public class Ensure {
      */
     public static <HiloxObject extends Enum> EnsureParamEnum that(HiloxObject hiloxObject) {
         return new EnsureParamEnum(hiloxObject);
+    }
+
+    /**
+     * 集合参数校验类
+     * @param hiloxObject 参数
+     * @param <HiloxObject> 参数类型
+     * @return
+     */
+    public static <HiloxObject extends Collection> EnsureParamCollection that(HiloxObject hiloxObject) {
+        return new EnsureParamCollection(hiloxObject);
     }
 }
