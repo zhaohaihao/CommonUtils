@@ -45,9 +45,9 @@ public class EnsureParamObject extends EnsureParam<Object> {
 
     /**
      * 不相等校验, 相等抛异常
-     * @param obj
-     * @param errorCode
-     * @param <HiloxObject>
+     * @param obj 比较对象
+     * @param errorCode 错误代码
+     * @param <HiloxObject> 参数类型
      * @return
      */
     public <HiloxObject extends Object> EnsureParamObject isNotEqualTo(HiloxObject obj, String errorCode) {
