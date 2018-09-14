@@ -2,6 +2,7 @@ package pers.hilox.framework.core.ensure;
 
 import pers.hilox.framework.core.ensure.extensions.EnsureParamBoolean;
 import pers.hilox.framework.core.ensure.extensions.EnsureParamObject;
+import pers.hilox.framework.core.ensure.extensions.EnsureParamString;
 
 /**
  * 参数校验类实例化类
@@ -17,6 +18,15 @@ public class Ensure {
      */
     public static EnsureParamObject that(Object object) {
         return new EnsureParamObject(object);
+    }
+
+    /**
+     * String参数校验类实例化
+     * @param string 参数
+     * @return
+     */
+    public static EnsureParamString that(String string) {
+        return new EnsureParamString(string);
     }
 
     /**
